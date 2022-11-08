@@ -1,7 +1,7 @@
 //Домашнее задание к занятию 1.2 «Способы поиска нужного HTML-элемента», задание 1
 const modalWin = document.getElementById("modal_main");
 const modalSuccess = document.getElementById("modal_success");
-//Делаем модельное окно активным
+//Делаем модальное окно активным
 modalWin.classList.add("modal_active");
 //Закрываем окно
 let elemList = document.querySelectorAll("div.modal__close");
@@ -15,5 +15,6 @@ elemArr.forEach(element => {
 
 //Показываем окно modal_success
 document.querySelector("a.show-success").onclick = () => {
+    modalWin.classList.remove("modal_active");
     modalSuccess.classList.add("modal_active");
 }
