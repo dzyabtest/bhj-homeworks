@@ -25,13 +25,7 @@ function nextSlide(){
 
     hideActiveSlide();
 
-    if (slideIndex < items.length-1){
-        showNextSlide(slideIndex+1);
-    }
-    else
-    {
-        showNextSlide(0);
-    }
+    showNextSlide(slideIndex < items.length - 1 ? slideIndex + 1 : 0);
 }
 
 function prevSlide(){
@@ -39,13 +33,7 @@ function prevSlide(){
 
     hideActiveSlide();
 
-    if (slideIndex > 0){
-        showNextSlide(slideIndex-1);
-    }
-    else
-    {
-        showNextSlide(items.length-1);
-    }
+    showNextSlide(slideIndex > 0 ? slideIndex - 1 : items.length-1);
 }
 
 //Регистрация обработчиков

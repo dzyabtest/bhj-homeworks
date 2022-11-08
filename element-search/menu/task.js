@@ -12,7 +12,7 @@ elemArr.forEach(element => {
             if (currentMenu){
                 currentMenu.classList.remove("menu_active");
                 //Если был клик на открытом меню - прерываем обработчик
-                if (currentMenu.parentElement == element.parentElement) {return}
+                if (currentMenu.parentElement == element.parentElement) {return false}
             }
 
             //Ищем родительский элемент
