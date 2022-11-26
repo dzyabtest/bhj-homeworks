@@ -1,3 +1,5 @@
+//Домашнее задание к занятию 1.3 «Объект события», задание 2
+
 class Game {
   constructor(container) {
     this.container = container;
@@ -24,6 +26,22 @@ class Game {
       В случае правильного ввода слова вызываем this.success()
       При неправильном вводе символа - this.fail();
      */
+    window.onkeydown = (event)=> {
+      let currentSymbol = this.currentSymbol.textContent;
+
+      if ((event.code >= 'KeyA') && (event.code <= 'KeyZ')) {
+        let currentKey = event.key;
+        
+        if (currentSymbol == currentKey) {
+          this.success();
+        }
+        else {
+          this.fail();
+        }
+      }
+
+
+    }
   }
 
   success() {
